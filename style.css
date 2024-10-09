@@ -1,0 +1,71 @@
+/* 基本スタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFD700; /* 明るい黄色の背景 */
+  margin: 0;
+  padding: 0;
+}
+
+.qa-container {
+  max-width: 800px; /* デスクトップでの最大幅 */
+  margin: auto;
+  padding: 20px;
+}
+
+.qa-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.question {
+  cursor: pointer; /* 質問部分にカーソルを合わせた際に、クリック可能であることを示す */
+  background-color: #f0f0f0; /* 軽い背景色でボタンのように見せる */
+  padding: 15px;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* 答えをデフォルトで非表示 */
+.answer {
+  display: none;
+}
+
+/* hidden クラスを外すと表示される */
+.answer.hidden {
+  display: block;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 600px) {
+  .qa-container {
+    padding: 10px; /* スマホでは少しだけ余白を持たせる */
+    margin: 0; 
+  }
+
+  .qa-item {
+    margin: 10px 0;  /* 上下の余白のみ確保し、左右には余白を持たせる */
+    padding: 15px;
+    border-radius: 0; /* 角をなくしてボタンのように表示 */
+  }
+
+  .question {
+    background-color: #fff; /* 背景を白にして見やすくする */
+    border-radius: 0; /* 質問部分も角をなくす */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影をつけてボタンのように */
+  }
+
+  body {
+    padding: 0; /* ボディ全体の余白を無くして全体を使う */
+  }
+  
+  img {
+    max-width: 100%; /* 画像が画面に収まるように */
+    height: auto;    /* 縦横比を保ったままリサイズ */
+    display: block;
+    margin: 0 auto; /* 画像を中央に配置 */
+  }
+}
