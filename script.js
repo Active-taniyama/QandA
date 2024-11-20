@@ -1,10 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const questions = document.querySelectorAll('.question');
-    
+
     questions.forEach(question => {
-        question.addEventListener('click', function() {
+        question.addEventListener('click', function () {
             const answer = this.nextElementSibling;
-            answer.classList.toggle('hidden');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+            } else {
+                answer.classList.add('hidden');
+            }
         });
     });
 });
