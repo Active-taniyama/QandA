@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     questions.forEach(question => {
         question.addEventListener('click', function () {
             const answer = this.nextElementSibling;
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
             } else {
-                answer.classList.add('hidden');
+                answer.style.display = "block";
             }
         });
     });
